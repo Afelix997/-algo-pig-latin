@@ -7,7 +7,9 @@ def translate(word_or_phrase):
   for i,word in enumerate(in_list):
     if word[0].isalpha():
       while in_list[i][0] not in vowel:
-        in_list[i]=in_list[i][1:] + in_list[i][0]       
+        in_list[i]=in_list[i][1:] + in_list[i][0]  
+      if word[0].lower() +word[1]== 'qu':
+        in_list[i]=in_list[i][1:] + in_list[i][0]
       if in_list[i][0] in vowel:
         in_list[i]= in_list[i] + 'ay'
     for letter in word:
@@ -20,7 +22,6 @@ def translate(word_or_phrase):
   result=' '.join(in_list)
   return result
        
-
 
   
 
